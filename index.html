@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morse Code Puzzle</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; background: #111; font-family: system-ui, sans-serif; }
+    #light { width: 220px; height: 220px; border-radius: 50%; background: #222; border: 4px solid #333; }
+    #light.on { background: #fff; box-shadow: 0 0 80px 20px rgba(255,255,255,.8); }
+    button { font-size: 1.2rem; padding: .7rem 1.6rem; cursor: pointer; }
+    button:disabled { cursor: not-allowed; opacity: .5; }
+  </style>
+</head>
+<body>
+  <div id="light"></div>
+  <button id="play">Play</button>
+  <!-- No "controls" attribute: no pause, seek or scrub UI -->
+  <audio id="a" src="audio.mp3" preload="auto"></audio>
+  <script src="script.js?v=3"></script>
+</body>
+</html>
